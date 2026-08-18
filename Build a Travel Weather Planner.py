@@ -1,0 +1,30 @@
+distance_mi=5
+is_raining=True
+has_bike=True
+has_car=False
+has_ride_share_app=True
+#Condition
+if not distance_mi:  
+    # Falsy value (0, None, etc.)
+    print(False)
+
+elif distance_mi <= 1:
+    # Walking distance
+    if not is_raining:
+        print(True)
+    else:
+        print(False)
+
+elif distance_mi <= 6:
+    # Biking distance
+    if has_bike and not is_raining:
+        print(True)
+    else:
+        print(False)
+
+else:
+    # Longer distance → car or ride‑share
+    if has_car or has_ride_share_app:
+        print(True)
+    else:
+        print(False)
